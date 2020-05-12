@@ -17,11 +17,20 @@ class Dog {
 }
 
 class SmallDog extends Dog {
+  static const MAX_BODY_SIZE = 30;
+
+  SmallDog(int age, String type, String name, int size)
+      : super(age, type, name, size);
+
   dynamic runAway() {
     print("I am running");
   }
 
-  var MAX_BODY_SIZE = 30;
-
-  int isSmail() {}
+  dynamic isSmail() {
+    if (size > MAX_BODY_SIZE) {
+      return 74;
+    } else {
+      return true;
+    }
+  }
 }
